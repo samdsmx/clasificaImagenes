@@ -1,0 +1,291 @@
+/*RESET*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+*{margin:0; padding:0; border:0;}
+
+html, body, #container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240,240,240);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1{ font-size: 26px; }
+h2{ font-size: 20px; }
+h3{ font-size: 16px; } 
+h4{ font-size: 14px; }
+h5{ font-size: 12px; }
+h6{ font-size: 10px; }
+
+li{ list-style: none;}
+a{ text-decoration: none;}
+a:hover { text-decoration: underline; }
+
+/* end clearfix */
+
+#imagen {
+	/*background-color: red;*/
+	text-align: center;
+	height: 90%;
+	width: 55%;
+	float:left;
+	}
+
+#imagen_expediente {
+	border-style:groove;
+	border-color:gray;
+	border-width:2px;
+	border-radius: 20px;
+	margin: 0px;
+	}
+
+#eliminarB{
+	position: absolute;
+	left: 5px;
+	bottom: 15px;
+	}
+
+#saltarB{
+	position: absolute;
+	left: 50%;
+	bottom: 15px;
+	}
+
+#otherTable{
+	width:100%;
+	background: none;
+	}
+
+#otherTable tr td{
+	text-align: right;
+	background: none;
+	}
+
+#otherTable	th {
+	padding-top:5px; text-shadow: none; background: rgb(240,240,240); text-align: center;
+	}
+
+
+input{
+    font-size:18px;
+    height: 28px;
+    font-family: Arial, helvetica;
+    outline:none;
+    transition: all 0.75s ease-in-out;
+    -webkit-transition: all 0.75s ease-in-out;
+    -moz-transition: all 0.75s ease-in-out;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border:2px solid rgba(0,0,0, 0.2);
+    padding: 3px 3px 0px 3px;
+	width: 95%;
+    background-image: url('http://i.stack.imgur.com/pbpVI.png');
+    background-size: 100% 38px;
+    background-repeat: repeat-x;
+    border-radius: 5px; /*up to date browsers support this, but you can add prefixes if you want*/
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+
+input:disabled{
+	background: none;
+	}
+
+#capturaForm input:not([type='checkbox']):focus {
+    box-shadow: 0 0 15px 5px #aaa;
+    -webkit-box-shadow: 0 0 15px 5px #aaa;
+    -moz-box-shadow: 0 0 15px 5px #aaa;
+    border:2px solid #999;
+}
+
+label{
+	display: block;
+	padding: 10px;
+	}
+
+figcaption{
+	text-align: center;
+	}
+
+figure{
+	padding: 10px;
+	}
+
+#imagen figure img{
+	padding: 0px;
+    max-width: 97% !important;
+    max-height: 97% !important;
+    }
+
+#formulario {
+	width: 45%;
+	height: 100%;
+	top: -100px;
+	/*background-color: gray;*/
+	float:left;
+	}
+
+fieldset{
+	border: 2px; 
+	border-radius: 20px;
+	margin-top: 5px;
+	margin-right: 20px; 
+	border-color: gray;
+	border-style: groove;
+	/*background-color: gray;*/
+	}
+
+#lFieldset{
+	text-align: center;
+	}
+
+details{
+	text-align: right;
+	position: absolute;
+	right: 5px;
+	bottom: 15px;
+	width: 40%;
+	}
+
+button{
+ 	cursor: pointer;
+	}
+
+
+progress {
+	height: 14px;
+	display: inline-block;
+	padding-left: 10px;
+	/* Important Thing */
+	-webkit-appearance: none;
+	border: none;
+}
+
+/* All good till now. Now we'll style the background */
+progress::-webkit-progress-bar {
+	background: black;
+	border-radius: 50px;
+	padding: 2px;
+	box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Now the value part */
+progress::-webkit-progress-value {
+	border-radius: 50px;
+	box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+	background:
+		-webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+		-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+		-webkit-linear-gradient(left, #b2b1b1, #908f8f);
+	
+	/* Looks great, now animating it */
+	background-size: 25px 14px, 100% 100%, 100% 100%;
+	-webkit-animation: move 5s linear 0 infinite;
+}
+
+/* That's it! Now let's try creating a new stripe pattern and animate it using animation and keyframes properties  */
+
+@-webkit-keyframes move {
+	0% {background-position: 0px 0px, 0 0, 0 0}
+	100% {background-position: -100px 0px, 0 0, 0 0}
+}
+
+/* Prefix-free was creating issues with the animation */
+
+div.wa {
+color: #fff;
+text-align: center;
+font-family: arial,sans-serif;
+font-weight: bold;
+overflow: hidden;
+}
+
+.wa {
+opacity: .85;
+border-radius: 10px;
+}
+
+div.wc {
+padding: 1em;
+}
+
+table.wf, table.wd {
+width: 100%;
+}
+.cf {
+border-collapse: collapse;
+}
+.wj {
+color: #dd0;
+text-align: right;
+}
+.Dp {
+padding-bottom: .8ex;
+}
+.aNP {
+outline: none;
+overflow-y: auto;
+}
+table.wd td.wg {
+font-weight: bold;
+padding-right: .3em;
+text-align: right;
+white-space: nowrap;
+}
+table.wd td.we {
+font-weight: normal;
+text-align: left;
+}
+.Do {
+color: #dd0;
+padding-top: .8em;
+text-align: left;
+}

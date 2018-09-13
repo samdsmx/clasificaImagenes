@@ -1,0 +1,46 @@
+<html>
+    <link rel="stylesheet" href="css/style_menu.css" type="text/css" charset="utf-8"/>  
+        
+    <ul id="navigation">
+        
+        <?php
+        if ($Accion!="Formulario")
+            echo "<li class='formulario'><a href='?Accion=Formulario'><span>Formulario</span></a></li>";
+        if ($Accion!="Estadisticas")
+            echo "<li class='estadisticas'><a href='?Accion=Estadisticas'><span>Estadisticas</span></a></li>";
+        if ($Accion!="Base" && $acceso==4)
+            echo "<li class='base'><a href='?Accion=Base'><span>Base de Datos</span></a></li>";
+        
+        ?>
+        
+        <li class="ayuda"><a href="#confirmPopupAyuda"><span>Ayuda</span></a></li>
+        <li class="salir"><a href="?CerrarSesion=OK"><span>Salir</span></a></li>
+    </ul>
+
+            
+
+    <script type="text/javascript" src="scripts/jquery-1.3.2.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var d=300;
+            $('#navigation a').each(function(){
+                $(this).stop().animate({
+                    'marginTop':'-80px'
+                },d+=150);
+            });
+
+            $('#navigation > li').hover(
+            function () {
+                $('a',$(this)).stop().animate({
+                    'marginTop':'-2px'
+                },200);
+            },
+            function () {
+                $('a',$(this)).stop().animate({
+                    'marginTop':'-80px'
+                },200);
+            }
+        );
+        });
+    </script>
+</html>
